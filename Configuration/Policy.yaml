@@ -1,0 +1,16 @@
+roles:
+  Team: []
+  Administrator: []
+
+resources:
+  methods:
+    Familiefejden_Task_AnswerMethods: 'method(Familiefejden\Controller\TaskController->(answer|list)Action())'
+    Familiefejden_Task_AdministrativeMethods: 'method(Familiefejden\Controller\TaskController->(new|create|delete|edit|update)Action())'
+
+acls:
+  Team:
+    methods:
+      Familiefejden_Task_AnswerMethods: GRANT
+  Administrator:
+    methods:
+      Familiefejden_Task_AdministrativeMethods: GRANT

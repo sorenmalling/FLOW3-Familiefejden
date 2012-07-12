@@ -1,0 +1,18 @@
+<f:layout name="Default" />
+		<f:section name="Content">
+			<f:if condition="{tasks}">
+				<ul class="tasks">
+				<f:for each="{tasks}" as="task">
+					<li>
+						<h1 style="font-family: 'Marko One', serif">{task.name}</h1>
+						<p>
+							{task.description}
+							<f:link.action action="show" arguments="{task : task}" class="btn btn-info pull-right">
+								Besvar
+							</f:link.action>
+						</p>
+					</li>
+				</f:for>
+				</ul>
+			</f:if>
+		</f:section>

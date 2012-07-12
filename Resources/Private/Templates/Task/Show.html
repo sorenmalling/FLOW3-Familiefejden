@@ -1,0 +1,6 @@
+<f:layout name="Default" />
+	<f:section name="Content">
+		<h1 style="font-family: 'Marko One', serif">{task.name}</h1>
+		<p>{task.description}</p>
+		<f:render partial="Task/Response" arguments="{task : task}" />
+	</f:section>
