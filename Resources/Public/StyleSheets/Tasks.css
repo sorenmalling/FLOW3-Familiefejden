@@ -1,0 +1,19 @@
+ul.tasks {
+	
+}
+
+ul.tasks li {
+	padding: 10px 0 10px 0;
+	border-bottom: 1px solid lightgrey;
+}
+
+ul.tasks li:last-child {
+	border-bottom: 0px;
+}
+
+ul.tasks li h2 {
+	text-align: left;
+	font-size: 1.2em;
+	font-family: Garamond;
+	font-weight: bold;
+}

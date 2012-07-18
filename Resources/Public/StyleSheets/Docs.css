@@ -1,49 +1,32 @@
 body {
-	margin-top: 60px;
+	font-family: Georgia;
+	line-height: 150%;
+}
+
+p {
+	line-height: 150%;
 }
 
 h1 {
-	font-family: Georgia, "Helvetica Neue";
 	font-weight: 300;
 	font-size: 3em;
 	text-align: center;
 }
 
+h2 {
+	font-family: 'Overlock', cursive;
+	font-size: 1.5em;
+}
+
 h3 {
-	font-family: Georgia;
 	font-size: 2em;
 }
 
-
-nav {
-	height: 40px;
-	background: -webkit-linear-gradient(bottom, #336699 25%, rgb(36,132,227) 63%);
-	font-family: Georgia;
-	font-size: 10pt;
-	position: fixed;
-	top: 5px;
+small {
+	font-size: 0.9em;
+	color: #c0c0c0;
 }
 
-nav ul {
-	padding-top: 12px;
-}
-
-nav ul li {
-	float: left;
-	color: #ffffff;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-left: 1px dotted #ffffff;
-}
-
-nav ul li a {
-	color: #ffffff;
-}
-
-nav ul li a:hover {
-	text-decoration: none;
-}
-
-nav ul li:first-child {
-	border-left: none;
+strong {
+	font-weight: bold;
 }

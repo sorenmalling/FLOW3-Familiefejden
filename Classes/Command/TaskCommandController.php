@@ -33,9 +33,18 @@ class TaskCommandController extends \TYPO3\FLOW3\Cli\CommandController {
 		for($i = 0; $i <= $number;$i++) {
 			$task = new \Familiefejden\Domain\Model\Task();
 			$task->setName('Dummy task ' . uniqid('task_'));
+			$task->setHiddenBefore(new \DateTime());
+			$task->setHiddenAfter(new \DateTime(rand(1, 31) . ' days'));
 			$task->setDescription('Description of dummy task ' . uniqid('task_'));
 			$this->taskRepository->add($task);
 		}
+	}
+
+	/**
+	 * Remove all tasks
+	 */
+	public function emptyCommand() {
+		$this->taskRepository->removeAll();
 	}
 
 }

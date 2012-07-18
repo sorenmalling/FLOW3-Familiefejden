@@ -1,9 +1,9 @@
 <f:layout name="Default" />
 	<f:section name="Content">
 		<f:for each="{teams}" as="team">
-			<h1 style="font-family: 'Marko One', serif">{team.name}</h1>
-			<f:if condition="{team.picture}">
-				<img src="{f:uri.resource(resource: team.picture)}" />
-			</f:if>
+			<f:debug title="{team.name}">{team}</f:debug>
+			<f:for each="{team.accounts}" as="account">
+				<f:debug title="account">{account}</f:debug>
+			</f:for>
 		</f:for>
 	</f:section>

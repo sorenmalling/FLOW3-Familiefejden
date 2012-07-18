@@ -9,21 +9,30 @@ namespace Familiefejden\Controller;
 use TYPO3\FLOW3\Annotations as FLOW3;
 
 /**
- * Standard controller for the Familiefejden package 
+ * Login controller for the Familiefejden package 
  *
  * @FLOW3\Scope("singleton")
  */
-class StandardController extends AbstractController {
+class LoginController extends \TYPO3\FLOW3\Security\Authentication\Controller\AuthenticationController {
 
 	/**
-	 * Index action
+	 * Authenticate action
 	 *
 	 * @return void
 	 */
-	public function indexAction() {
-		$this->view->assign('foos', array(
-			'bar', 'baz'
-		));
+	public function authenticateAction() {
+		parent::authenticateAction();
+		$this->redirect('index', 'Standard');
+	}
+
+	/**
+	 * Logout action
+	 *
+	 * @return void
+	 */
+	public function logoutAction() {
+		parent::logoutAction();
+		$this->redirect('index', 'Standard');
 	}
 
 }

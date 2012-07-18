@@ -13,4 +13,5 @@ acls:
       Familiefejden_Task_AnswerMethods: GRANT
   Administrator:
     methods:
+      Familiefejden_Task_AnswerMethods: GRANT
       Familiefejden_Task_AdministrativeMethods: GRANT

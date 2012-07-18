@@ -4,7 +4,8 @@
 				<ul class="tasks">
 				<f:for each="{tasks}" as="task">
 					<li>
-						<h1 style="font-family: 'Marko One', serif">{task.name}</h1>
+						<h2>{task.name}</h2>
+						<small>Opgaven åbner <f:format.date format="d. M Y">{task.hiddenBefore}</f:format.date></small>
 						<p>
 							{task.description}
 							<f:link.action action="show" arguments="{task : task}" class="btn btn-info pull-right">

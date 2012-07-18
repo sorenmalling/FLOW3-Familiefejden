@@ -1,5 +1,5 @@
 <?php
-namespace Familiefejden\Controller;
+namespace Familiefejden\Command;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Familiefejden".              *
@@ -9,11 +9,12 @@ namespace Familiefejden\Controller;
 use TYPO3\FLOW3\Annotations as FLOW3;
 
 /**
- * Team controller for the Familiefejden package 
+ * Task command controller for the Familiefejden package
  *
  * @FLOW3\Scope("singleton")
  */
-class TeamController extends AbstractController {
+class TeamCommandController extends \TYPO3\FLOW3\Cli\CommandController {
+
 	/**
 	 * Team repository
 	 *
@@ -39,48 +40,24 @@ class TeamController extends AbstractController {
 	protected $accountRepository;
 
 	/**
-	 * Index action
-	 *
-	 * @return void
-	 */
-	public function indexAction() {
-		$this->view->assign('foos', array(
-			'bar', 'baz'
-		));
-	}
-
-	/**
-	 * New team
-	 *
-	 * @return void
-	 */
-	public function newAction() {
-	}
-
-	/**
 	 * Create new team
 	 *
-	 * @param \Familiefejden\Domain\Model\Team $newTeam
-	 * @return void
-	 */
-	public function createAction(\Familiefejden\Domain\Model\Team $newTeam) {
-		$this->teamRepository->add($newTeam);
-
-		$account = $this->accountFactory->createAccountWithPassword($newTeam->getEmail(), 'password', array('Team'));
-		$account->setParty($newTeam);
-		$this->accountRepository->add($account);
-
-		$this->flashMessageContainer->addMessage(new \TYPO3\FLOW3\Error\Message('Team created'));
-		$this->redirect('list');
-	}
-
-	/**
-	 * List teams
+	 * @param string $name Team name
+	 * @param string $email Team e-mail
 	 *
 	 * @return void
 	 */
-	public function listAction() {
-		$this->view->assign('teams', $this->teamRepository->findAll());
+	public function createCommand($name, $email) {
+		$newTeam = new \Familiefejden\Domain\Model\Team();
+		$newTeam->setName($name);
+		$newTeam->setEmail($email);
+		$account = $this->accountFactory->createAccountWithPassword($newTeam->getEmail(), 'password', array('Team'));
+		$this->accountRepository->add($account);
+
+		$newTeam->addAccount($account);
+		$this->teamRepository->add($newTeam);
+
+		$this->output(\TYPO3\FLOW3\var_dump($newTeam));
 	}
 
 }

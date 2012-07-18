@@ -3,13 +3,41 @@
 <f:layout name="Default"/>
 
 <f:section name="Content">
+	<div class="grid_8">
+		<p>
+			Familiefejden er et sjovt spil, hvor familier "fejder" imod andre familier!
+		</p>
+		<ul>
+			<li>Gratis</li>
+			<li>Sjovt</li>
+			<li>Lærerigt</li>
+			<li>Hyggeligt</li>
+		</ul>
+
+	</div>
+	<div class="grid_4">
+		TILMELD BILLEDE
+	</div>
+
 	<div class="grid_12">
 		<h1>Familiefejden</h1>
 	</div>
 	<div class="grid_4">
 		<h3>Tilmeld</h3>
 		<p>
-
+			<f:form action="create" controller="Team" objectName="newTeam" arguments="{newTeam : newTeam}">
+				<p class="form-fields">
+					<label>Hold navn</label>
+					<f:form.textfield property="name" />
+				</p>
+				<p class="form-fields">
+					<label>E-mail</label>
+					<f:form.textfield property="email" />
+				</p>
+				<p class="form-actions">
+					<f:form.submit value="Videre"/>
+				</p>
+			</f:form>
 		</p>
 	</div>
 	<div class="grid_4">
@@ -19,9 +47,9 @@
 		</p>
 	</div>
 	<div class="grid_4">
-		<h3>Et svar</h3>
+		<h3>Et login</h3>
 		<p>
-			<f:render partial="Task/Response" />
+			<f:render partial="Common/Login" />
 		</p>
 	</div>
 </f:section>

@@ -13,7 +13,7 @@ use TYPO3\FLOW3\Annotations as FLOW3;
  *
  * @FLOW3\Scope("singleton")
  */
-class TaskController extends \TYPO3\FLOW3\Mvc\Controller\ActionController {
+class TaskController extends AbstractController {
 
 
 	/**
@@ -44,6 +44,29 @@ class TaskController extends \TYPO3\FLOW3\Mvc\Controller\ActionController {
 		$answer = new \Familiefejden\Domain\Model\Answer();
 		$task->addAnswer($answer);
 		$this->taskRepository->update($task);
+	}
+
+	/**
+	 * Answer action
+	 *
+	 * @param \Familiefejden\Domain\Model\Task $task
+	 * @return void
+	 */
+	public function answerAction(\Familiefejden\Domain\Model\Task $task, \Familiefejden\Domain\Model\Answer $answer) {
+		$answer->setTeam($this->securityContext->getParty());
+		$task->addAnswer($answer);
+
+		\TYPO3\FLOW3\var_dump($task);die;
+
+		$this->taskRepository->update($task);
+
+		$this->redirect('list');
+	}
+
+	/**
+	 * New task
+	 */
+	public function newAction() {
 	}
 
 }

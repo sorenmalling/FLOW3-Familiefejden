@@ -1,0 +1,16 @@
+{namespace form=TYPO3\Form\ViewHelpers}
+<f:layout name="Default" />
+
+<f:section name="Content">
+	<f:form action="create" objectName="newTeam">
+		<p>
+			Name <f:form.textfield property="name" />
+		</p>
+		<p>
+			E-mail <f:form.textfield property="email" />
+		</p>
+		<p>
+			<f:form.submit value="Tilmeld" />
+		</p>
+	</f:form>
+</f:section>

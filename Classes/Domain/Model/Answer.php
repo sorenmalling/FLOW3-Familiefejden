@@ -32,6 +32,21 @@ class Answer {
 	 */
 	protected $team;
 
+	/**
+	 * Text, a written answer
+	 *
+	 * @ORM\Column(nullable=true)
+	 * @var string
+	 */
+	protected $text;
+
+	/**
+	 * Picture
+	 * @ORM\ManyToOne
+	 * @var \TYPO3\FLOW3\Resource\Resource
+	 */
+	protected $picture;
+
 
 	/**
 	 * @param \Familiefejden\Domain\Model\Task  $task
@@ -59,6 +74,34 @@ class Answer {
 	 */
 	public function getTeam() {
 		return $this->team;
+	}
+
+	/**
+	 * @param string $text
+	 */
+	public function setText($text) {
+		$this->text = $text;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getText() {
+		return $this->text;
+	}
+
+	/**
+	 * @param \TYPO3\FLOW3\Resource\Resource $picture
+	 */
+	public function setPicture($picture) {
+		$this->picture = $picture;
+	}
+
+	/**
+	 * @return \TYPO3\FLOW3\Resource\Resource
+	 */
+	public function getPicture() {
+		return $this->picture;
 	}
 }
 ?>

@@ -1,0 +1,13 @@
+TYPO3:
+  FLOW3:
+    security:
+      authentication:
+        providers:
+          DefaultProvider:
+            provider: 'PersistedUsernamePasswordProvider'
+            #requestPatterns:
+              #controllerObjectName: "TYPO3\TYPO3\Controller\.*|TYPO3\TYPO3\Service\.*"
+            entryPoint: 'WebRedirect'
+            #entryPointOptions:
+              #uri: typo3/login
+        authenticationStrategy: oneToken

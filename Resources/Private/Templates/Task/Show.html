@@ -1,6 +1,15 @@
 <f:layout name="Default" />
 	<f:section name="Content">
-		<h1 style="font-family: 'Marko One', serif">{task.name}</h1>
+		<h2>Opgave beskrivelse</h2>
 		<p>{task.description}</p>
-		<f:render partial="Task/Response" arguments="{task : task}" />
+		<f:if condition="{task.additionalInformation}">
+			<h2>Bonus information</h2>
+			<p>
+				Det her kan være noget tekst som hjælper jer..!
+			</p>
+		</f:if>
+		<p>
+			Jeres svar skal være indsendt senest <f:format.date format="d. M Y">{task.hiddenAfter}</f:format.date>
+		</p>
+		<f:render partial="Task/Answer" arguments="{task : task}" />
 	</f:section>

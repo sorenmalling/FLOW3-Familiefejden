@@ -1,5 +1,5 @@
 <?php
-namespace Familiefejden\Domain\Repository;
+namespace Familiefejden\Controller;
 
 /*                                                                        *
  * This script belongs to the FLOW3 package "Familiefejden".              *
@@ -9,10 +9,21 @@ namespace Familiefejden\Domain\Repository;
 use TYPO3\FLOW3\Annotations as FLOW3;
 
 /**
- * A repository for Tasks
+ * Answer controller for the Familiefejden package 
  *
  * @FLOW3\Scope("singleton")
  */
-class TaskRepository extends \TYPO3\FLOW3\Persistence\Repository {
+class AnswerController extends AbstractController {
+
+	/**
+	 * Index action
+	 *
+	 * @return void
+	 */
+	public function listAction() {
+		#$this->view->assign('answers', $this->)
+	}
+
 }
+
 ?>
