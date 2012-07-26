@@ -1,24 +1,29 @@
+/* line 1, sass/Forms.scss */
 input, textarea, select {
-	outline: 0;
+  outline: 0;
 }
 
+/* line 5, sass/Forms.scss */
 form p {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
+/* line 9, sass/Forms.scss */
 form p label {
-	float: left;
-	width: 100px;
-	padding-top: 3px;
+  float: left;
+  width: 100px;
+  padding-top: 3px;
 }
 
+/* line 15, sass/Forms.scss */
 form p.form-fields input {
-	padding: 3px;
-	font-family: Verdana;
-	font-size: 0.8em;
-	border: 1px solid lightgrey;
+  padding: 3px;
+  font-family: Verdana;
+  font-size: 0.8em;
+  border: 1px solid lightgrey;
 }
 
+/* line 22, sass/Forms.scss */
 form p.form-actions {
-	text-align: right;
+  text-align: right;
 }

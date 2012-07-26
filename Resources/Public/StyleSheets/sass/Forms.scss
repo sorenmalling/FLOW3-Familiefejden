@@ -1,0 +1,24 @@
+input, textarea, select {
+	outline: 0;
+}
+
+form p {
+	margin-bottom: 10px;
+}
+
+form p label {
+	float: left;
+	width: 100px;
+	padding-top: 3px;
+}
+
+form p.form-fields input {
+	padding: 3px;
+	font-family: Verdana;
+	font-size: 0.8em;
+	border: 1px solid lightgrey;
+}
+
+form p.form-actions {
+	text-align: right;
+}

@@ -1,0 +1,68 @@
+/*nav {
+	height: 40px;
+	background: -webkit-linear-gradient(bottom, #336699 25%, rgb(36,132,227) 63%);
+	font-family: Georgia;
+	font-size: 10pt;
+	position: fixed;
+	top: 5px;
+}
+
+nav ul {
+	padding-top: 12px;
+}
+
+nav ul li {
+	float: left;
+	color: #ffffff;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-left: 1px dotted #ffffff;
+}
+
+nav ul li a {
+	color: #ffffff;
+}
+
+nav ul li a:hover {
+	text-decoration: none;
+}
+
+nav ul li:first-child {
+	border-left: none;
+}*/
+
+
+header {
+	background-image: url('../Images/logo-300.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+	height: 65px;
+}
+
+header nav ul li {
+	float: right;
+}
+
+nav {
+	top: 0;
+	height: 50px;
+}
+
+nav ul li {
+	float: left;
+	padding: 10px;
+	font-size: 1em;
+	border: 1px solid transparent;
+}
+
+nav ul li:hover {
+	border: 1px solid lightgrey;
+}
+
+nav ul li a {
+	text-decoration: none;
+}
+
+nav ul li:first-child {
+	border-left: none;
+}

@@ -30,43 +30,44 @@ nav ul li a:hover {
 nav ul li:first-child {
 	border-left: none;
 }*/
+/* line 35, sass/Navigation.scss */
+header {
+  background-image: url("../Images/logo-300.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 65px;
+}
 
+/* line 42, sass/Navigation.scss */
+header nav ul li {
+  float: right;
+}
 
+/* line 46, sass/Navigation.scss */
 nav {
-	background: rgb(122,188,255); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
-	top: 0;
-	width: 100%;
-	height: 50px;
-	position: fixed;
+  top: 0;
+  height: 50px;
 }
 
+/* line 51, sass/Navigation.scss */
 nav ul li {
-	float: left;
-	color: #ffffff;
-	padding: 10px;
-	font-size: 1.3em;
-	border: 1px solid transparent;
+  float: left;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid transparent;
 }
 
+/* line 58, sass/Navigation.scss */
 nav ul li:hover {
-	border: 1px solid lightgrey;
+  border: 1px solid lightgrey;
 }
 
+/* line 62, sass/Navigation.scss */
 nav ul li a {
-	color: #ffffff;
+  text-decoration: none;
 }
 
-nav ul li a:hover {
-	text-decoration: none;
-}
-
+/* line 66, sass/Navigation.scss */
 nav ul li:first-child {
-	border-left: none;
+  border-left: none;
 }

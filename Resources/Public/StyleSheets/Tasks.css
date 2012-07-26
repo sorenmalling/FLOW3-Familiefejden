@@ -1,19 +1,18 @@
-ul.tasks {
-	
-}
-
+/* line 5, sass/Tasks.scss */
 ul.tasks li {
-	padding: 10px 0 10px 0;
-	border-bottom: 1px solid lightgrey;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid lightgrey;
 }
 
+/* line 10, sass/Tasks.scss */
 ul.tasks li:last-child {
-	border-bottom: 0px;
+  border-bottom: 0px;
 }
 
+/* line 14, sass/Tasks.scss */
 ul.tasks li h2 {
-	text-align: left;
-	font-size: 1.2em;
-	font-family: Garamond;
-	font-weight: bold;
+  text-align: left;
+  font-size: 1.2em;
+  font-family: Garamond;
+  font-weight: bold;
 }

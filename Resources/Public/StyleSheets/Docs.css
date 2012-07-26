@@ -1,32 +1,48 @@
+/* line 1, sass/Docs.scss */
 body {
-	font-family: Georgia;
-	line-height: 150%;
+  font-family: Georgia;
+  line-height: 150%;
 }
 
+/* line 6, sass/Docs.scss */
 p {
-	line-height: 150%;
+  line-height: 150%;
 }
 
+/* line 10, sass/Docs.scss */
 h1 {
-	font-weight: 300;
-	font-size: 3em;
-	text-align: center;
+  font-weight: 300;
+  font-size: 3em;
+  text-align: center;
 }
 
+/* line 16, sass/Docs.scss */
+img {
+  padding: 5px;
+  border: 1px solid lightgrey;
+  border-right: 2px solid darkgrey;
+  border-bottom: 2px solid darkgrey;
+  background-color: white;
+}
+
+/* line 24, sass/Docs.scss */
 h2 {
-	font-family: 'Overlock', cursive;
-	font-size: 1.5em;
+  font-family: 'Overlock', cursive;
+  font-size: 1.5em;
 }
 
+/* line 29, sass/Docs.scss */
 h3 {
-	font-size: 2em;
+  font-size: 2em;
 }
 
+/* line 33, sass/Docs.scss */
 small {
-	font-size: 0.9em;
-	color: #c0c0c0;
+  font-size: 0.9em;
+  color: #c0c0c0;
 }
 
+/* line 38, sass/Docs.scss */
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
